@@ -1,11 +1,12 @@
-package com.villageEmploie.villageEmploisApi.model;
+package com.villageEmploie.villageEmploisApi.model.dto;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import lombok.NonNull;
 
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 /**
@@ -55,4 +56,28 @@ public class Vehicles {
      * vehicle equipments
      */
     private List<Equipments> equipmentList = new ArrayList<>();
+
+    /**
+     * start date
+     */
+    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
+    private Date startDate;
+
+    /**
+     * creation date
+     */
+    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
+    private Date creationDate;
+
+    /**
+     * end date
+     */
+    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
+    private Date endDate;
+
+    /**
+     * update date
+     */
+    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
+    private Date updateDate;
 }

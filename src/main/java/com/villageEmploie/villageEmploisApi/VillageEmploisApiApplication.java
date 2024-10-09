@@ -14,6 +14,7 @@ public class VillageEmploisApiApplication {
 	 * @param args
 	 */
 	public static void main(String[] args) {
+		// start application main
 		SpringApplication.run(VillageEmploisApiApplication.class, args);
 	}
 }
