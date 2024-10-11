@@ -49,8 +49,9 @@ public class VehicleManager {
         // unicité des vehicles
         Map<Integer, Vehicles> vehiclesMap = new HashMap<>();
         // iteration des lignes de vehicles
-        Iterator<VehicleTable> vehicleTableIterator = vehicleRepository.findAll().iterator().hasNext() ? vehicleRepository.findAll().iterator(): null;
-        // parcourire la list des lignes de la table vehicles
+        Iterator<VehicleTable> vehicleTableIterator = vehicleRepository.findAll().iterator().hasNext() ?
+                vehicleRepository.findAll().iterator(): null;
+        // parcourir la list des lignes de la table vehicles
         if(vehicleTableIterator != null) {
             while (vehicleTableIterator.hasNext()) {
                 //vehicle table ligne par ligne
